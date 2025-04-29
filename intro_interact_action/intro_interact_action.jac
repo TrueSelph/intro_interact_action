@@ -19,7 +19,7 @@ node IntroInteractAction :InteractAction: {
     }
 
     can healthcheck() -> Union[bool, dict] {
-        
+
         if(not self.prompt) {
             return {
                 "status": False,
@@ -29,6 +29,6 @@ node IntroInteractAction :InteractAction: {
         }
 
         return True;
-       
+
     }
 }
