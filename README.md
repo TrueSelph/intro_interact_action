@@ -1,12 +1,11 @@
 # Intro Interact Action
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/TrueSelph/intro_interact_action)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/TrueSelph/intro_interact_action/test-intro_interact_action.yaml)
 ![GitHub issues](https://img.shields.io/github/issues/TrueSelph/intro_interact_action)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/TrueSelph/intro_interact_action)
 ![GitHub](https://img.shields.io/github/license/TrueSelph/intro_interact_action)
 
-This package, developed by V75 Inc., is designed to introduce first-time users to the system by dispatching an introductory prompt directive to the `persona_response_action`. As a core interact action, it ensures that new users receive an engaging and informative initial interaction. The package is a singleton, and it requires the Jivas library version 2.0.0 and depends on the `persona_interact_action` for executing its introductory directive.
+This action triggers upon a first-time user message by dispatching an introductory prompt directive to the `persona_response_action`. As a core interact action, it ensures that new users receive an engaging and informative initial interaction. The package is a singleton, and it requires the Jivas library version 2.0.0 and depends on the `persona_interact_action` for executing its introductory directive.
 
 ## Package Information
 
@@ -28,7 +27,7 @@ This package, developed by V75 Inc., is designed to introduce first-time users t
 
 - **Jivas:** `^2.0.0`
 - **Actions:**
-  - `jivas/persona_interact_action`: `0.0.1`
+  - `jivas/persona_interact_action`: `>=0.0.1`
 
 ---
 
