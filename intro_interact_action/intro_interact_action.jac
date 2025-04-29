@@ -1,3 +1,4 @@
+import:py from typing { Union }
 import:py traceback;
 import:jac from jivas.agent.action.interact_action { InteractAction }
 
@@ -17,15 +18,17 @@ node IntroInteractAction :InteractAction: {
         return visitor.export();
     }
 
-    can healthcheck() -> bool {
-        try {
-            if(self.prompt) {
-                return True;
-            }
-            return False;
-        } except Exception as e {
-            self.logger.error(f"An exception occurred in {self.label}:\n{traceback.format_exc()}\n");
-            return False;
+    can healthcheck() -> Union[bool, dict] {
+
+        if(not self.prompt) {
+            return {
+                "status": False,
+                "message": "Prompt is not set",
+                "severity": "error"
+            };
         }
+
+        return True;
+
     }
 }
